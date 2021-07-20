@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  bash:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bash
+    privileged: true
