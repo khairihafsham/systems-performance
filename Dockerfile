@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 RUN apt update && apt upgrade -y
 
 RUN apt install -y sysstat procps util-linux iproute2 numactl bpfcc-tools \
-                   trace-cmd nicstat ethtool tiptop msr-tools bpftrace
+                   trace-cmd nicstat ethtool tiptop msr-tools bpftrace strace
 
 RUN apt install -y linux-tools-common linux-tools-generic perf-tools-unstable
 
