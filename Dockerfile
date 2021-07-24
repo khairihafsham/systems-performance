@@ -1,5 +1,7 @@
 FROM ubuntu:20.04
 
+RUN yes | unminimize
+
 RUN apt update && apt upgrade -y
 
 RUN apt install -y sysstat procps util-linux iproute2 numactl bpfcc-tools \
@@ -11,6 +13,4 @@ RUN ln -s /usr/lib/linux-tools/*/perf /usr/local/bin/perf
 
 RUN apt install -y man-db manpages-dev
 
-RUN apt install -y vim
-
-RUN yes | unminimize
+RUN apt install -y vim less
