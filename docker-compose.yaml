@@ -5,5 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: bash
     privileged: true
+    volumes:
+      - /lib/modules:/lib/modules:ro
+    pid: host
