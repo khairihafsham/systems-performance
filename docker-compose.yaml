@@ -8,4 +8,6 @@ services:
     privileged: true
     volumes:
       - /lib/modules:/lib/modules:ro
+      - ./:/shared
+    working_dir: /shared
     pid: host

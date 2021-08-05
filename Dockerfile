@@ -22,5 +22,10 @@ RUN apt install -y man-db manpages-dev
 
 RUN apt install -y vim less
 
-WORKDIR /root
+RUN sed 's/="false/="true/' -i /etc/default/sysstat
+
+COPY ./entrypoint.sh /
+
+ENTRYPOINT ["/entrypoint.sh"]
+
 CMD mount -t debugfs debugfs /sys/kernel/debug && /bin/bash
