@@ -10,5 +10,7 @@ requires extra step to enable.
 
 Requires cron to call a command for collecting data. To enable, do below:
 
+```
 > service sysstat start
 > service cron start
+```
