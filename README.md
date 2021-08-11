@@ -41,3 +41,9 @@ Requires cron to call a command for collecting data. To enable, do below:
 > service sysstat start
 > service cron start
 ```
+
+example cron config, collect metric every 1 minute
+
+```
+*/1 * * * * root command -v debian-sa1 > /dev/null && debian-sa1 1 1 -S ALL
+```
